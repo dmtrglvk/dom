@@ -1,0 +1,39 @@
+$ubuntu-bold: 'ubuntu-bold', Arial, sans-serif;
+$ubuntu-bold-it: 'ubuntu-bold-it', Arial, sans-serif;
+$ubuntu-italic: 'ubuntu-italic', Arial, sans-serif;
+$ubuntu-light: 'ubuntu-light', Arial, sans-serif;
+$ubuntu-light-it: 'ubuntu-light-it', Arial, sans-serif;
+$ubuntu-reg: 'ubuntu-reg', Arial, sans-serif;
+
+
+@mixin fonts($font-family, $file-path){
+  font-family: $font-family;
+  src: url('../fonts/#{$file-path}.woff2') format('woff2'),
+  url('../fonts/#{$file-path}.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  @include fonts('ubuntu-bold', ubuntu/ubuntu-bold-webfont);
+}
+
+@font-face {
+  @include fonts('ubuntu-bold-it', ubuntu/ubuntu-bolditalic-webfont);
+}
+
+@font-face {
+  @include fonts('ubuntu-italic', ubuntu/ubuntu-italic-webfont);
+}
+
+@font-face {
+  @include fonts('ubuntu-light', ubuntu/ubuntu-light-webfont);
+}
+
+@font-face {
+  @include fonts('ubuntu-light-it', ubuntu/ubuntu-lightitalic-webfont);
+}
+
+@font-face {
+  @include fonts('ubuntu-reg', ubuntu/ubuntu-regular-webfont);
+}

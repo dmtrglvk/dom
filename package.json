@@ -1,0 +1,38 @@
+{
+  "name": "domum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-twig": "^0.7.0",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1",
+    "list.js": "^1.5.0",
+    "masonry-layout": "^4.2.2",
+    "object-fit-images": "^3.2.4",
+    "owl.carousel2": "^2.2.1",
+    "paroller.js": "^1.4.4",
+    "webpack": "^4.17.1",
+    "webpack-stream": "^5.1.1"
+  }
+}

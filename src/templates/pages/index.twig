@@ -1,0 +1,74 @@
+{% include '../common/head.twig' %}
+
+<main class="main bg-1">
+    {% include '../common/header.twig' %}
+    <div class="content">
+        <div class="container">
+            {% include '../components/main-slider.twig' %}
+            <div class="row flex--between mb100 active-area">
+                <div class="col-md-4 mb30 card-item">
+                    <div class="prod-name">
+                        <span>za vso</span>
+                        <strong class="orange">družino</strong>
+                    </div>
+                    <a href="#" class="product-card orange">
+                        <div class="product-picture">
+                            <img src="images/prod1.png" alt="">
+                            <div class="floating_item_1 blured js-parallax-item" data-paroller-factor="-0.06" data-paroller-type="foreground" data-paroller-direction="vertical"><img src="http://pngimg.com/uploads/tomato/tomato_PNG12528.png" width="111" height="111" alt=""></div>
+                            <div class="floating_item_2 js-parallax-item" data-paroller-factor="0.06" data-paroller-type="foreground" data-paroller-direction="vertical"><img src="http://purepng.com/public/uploads/large/purepng.com-salad-leafvegetables-salad-salad-leaf-leaf-lettuce-941524727356d9flc.png" width="107" height="107" alt=""></div>
+                        </div>
+                        <div class="product-card-info">
+                            <h4 class="heading1_6">Argeta</h4>
+                            <span class="grey-text">Bogata izbira dobrot.</span>
+                            <span class="arrow-link">Odkrij okusov</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb30 card-item">
+                    <div class="prod-name">
+                        <span>za</span>
+                        <strong class="yellow">najmlajše</strong>
+                    </div>
+                    <a href="#" class="product-card">
+                        <div class="product-picture">
+                            <img src="images/prod1.png" alt="">
+                            <div class="floating_item_3 js-parallax-item" data-paroller-factor="-0.07" data-paroller-type="foreground" data-paroller-direction="vertical"><img src="https://via.placeholder.com/100x70" alt=""></div>
+                            <div class="floating_item_4 js-parallax-item" data-paroller-factor="-0.07" data-paroller-type="foreground" data-paroller-direction="vertical"><img src="http://www.signummax.hr/storage/upload/articles/argeta_junior_stalak001_125145.png" alt=""></div>
+                        </div>
+                        <div class="product-card-info">
+                            <h4 class="heading1_6 black">Argeta Junior</h4>
+                            <span class="grey-text">Najljubši namazi otrok.</span>
+                            <span class="arrow-link yellow">Odkrij okusov</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb30 card-item">
+                    <div class="prod-name">
+                        <span>za</span>
+                        <strong class="black">gurmane</strong>
+                    </div>
+                    <a href="#" class="product-card black">
+                        <div class="product-picture">
+                            <img src="images/prod1.png" alt="">
+                            <div class="floating_item_5"><img src="https://via.placeholder.com/118x120" alt=""></div>
+                            <div class="floating_item_6 blured"><img src="https://via.placeholder.com/81x118" alt=""></div>
+                        </div>
+                        <div class="product-card-info">
+                            <h4 class="heading1_6 black">Argeta Exclusive</h4>
+                            <span class="grey-text">Najljubši namazi otrok.</span>
+                            <span class="arrow-link">Odkrij okusov</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% include '../components/news.twig' %}
+            {% include '../components/subscription.twig' %}
+            {% include '../components/description.twig' %}
+            {% include '../components/timeline-slider.twig' %}
+        </div>
+    </div>
+    {% include '../common/footer.twig' %}
+</main>
+
+
+{% include '../common/end.twig' %}

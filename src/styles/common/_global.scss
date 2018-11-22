@@ -1,0 +1,18 @@
+body {
+  width: 100%;
+  background-color: $white;
+  font: 18px/29px $ubuntu-light;
+  color: $black;
+  & > svg {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  strong {
+    font-family: $ubuntu-bold;
+    font-weight: normal;
+  }
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,73 @@
+/*----------------------------------*\
+    spacing variables
+\*----------------------------------*/
+
+/* sizes of padding and margin */
+$sizes: 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 160;
+
+/* prefixes */
+$contains: (
+        'pt': padding-top,
+        'pb': padding-bottom,
+        'pr': padding-right,
+        'pl': padding-left,
+        'mt': margin-top,
+        'mb': margin-bottom,
+        'mr': margin-right,
+        'ml': margin-left
+);
+
+/* responsive spacings */
+$spacing-md: 'true';
+$spacing-xs: 'true';
+
+@each $prefix, $meaning in $contains {
+  @each $size in $sizes {
+    .#{$prefix}#{$size} {
+      #{$meaning}: $size*1px;
+    }
+    @media #{$sm-down} {
+      .#{$prefix}#{$size}-sm {
+        #{$meaning}: $size*1px !important;
+      }
+    }
+    @if $spacing-md == 'true' {
+      @media #{$md-down} {
+        .#{$prefix}#{$size}-md {
+          #{$meaning}: $size*1px !important;
+        }
+      }
+    }
+
+    @if $spacing-xs == 'true' {
+      @media #{$xs-down} {
+        .#{$prefix}#{$size}-xs {
+          #{$meaning}: $size*1px !important;
+        }
+      }
+    }
+  }
+  .#{$prefix}0 {
+    #{$meaning}: 0 !important;
+  }
+  @media #{$sm-down} {
+    .#{$prefix}0-sm {
+      #{$meaning}: 0 !important;
+    }
+  }
+  @if $spacing-md == 'true' {
+    @media #{$md-down} {
+      .#{$prefix}0-md {
+        #{$meaning}: 0 !important;
+      }
+    }
+  }
+
+  @if $spacing-xs == 'true' {
+    @media #{$xs-down} {
+      .#{$prefix}0-xs {
+        #{$meaning}: 0 !important;
+      }
+    }
+  }
+}
