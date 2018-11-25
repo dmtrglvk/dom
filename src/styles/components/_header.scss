@@ -1,0 +1,201 @@
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+.logo {
+	width: 220px;
+	height:200px;
+	text-indent: -9999px;
+	background: url(../images/logo.png) no-repeat;
+	flex-shrink: 0;
+	position: relative;
+
+	&:before {
+		content: "";
+		width: 999em;
+		height: 2px;
+		background: $gold;
+		position: absolute;
+		top: 100px;
+		left: -999em;
+	}
+
+	a {
+		display: block;
+		width: 128px;
+		height: 75px;
+		margin: 33px 0 0 45px;
+	}
+}
+.navigation {
+	padding: 40px 0 0;
+	width: 100%;
+	position: relative;
+
+	&>ul {
+		display: flex;
+		align-self: flex-start;
+		text-transform: uppercase;
+		font-family: $ubuntu-bold;
+		margin: 0 0 0 25px;
+
+		&>li {
+			position: relative;
+			margin: 0 25px 0 0;
+
+			&:before {
+				content: "";
+				width: 25px;
+				height: 2px;
+				background: $gold;
+				position: absolute;
+				top: 60px;
+				left: -25px;
+			}
+			&:after {
+				content: "";
+				width: 100%;
+				height: 2px;
+				background: $gold;
+				position: absolute;
+				top: 60px;
+				left: 0;
+			}
+
+			&.current {
+				&:before {
+					display: none;
+				}
+				&:after {
+					width: 100%;
+					height: 4px;
+					top: 59px;
+					background: $red;
+				}
+				& + li {
+					&:before {
+						width: 100%;
+						left: 0;
+					}
+				}
+			}
+
+			&:last-of-type {
+				&:before {
+					content: "";
+					width: calc(100% + 25px);
+					height: 2px;
+					background: $gold;
+					position: absolute;
+					top: 60px;
+					left: -25px;
+					display: block !important;
+				}
+				&:after {
+					content: "";
+					width: 999em;
+					height: 2px;
+					background: $gold;
+					position: absolute;
+					top: 60px;
+					left: 100%;
+				}
+				&.current {
+					&:before {
+						width: 100%;
+						height: 4px;
+						top: 59px;
+						background: $red;
+						left: 0;
+					}
+					&:after {
+						left: calc(100% + 25px);
+					}
+				}
+			}
+
+			&.with-dropdown {
+				&>a {
+					&:after {
+						@include arrow(8px, 8px, $blue, 2px, 35deg);
+						margin: 5px 0 0 10px;
+					}
+				}
+				&:hover {
+					&>a {
+						color: $red;
+
+						&:after {
+							@include arrow(8px, 8px, $red, 2px, -145deg);
+							margin-top: 10px;
+						}
+					}
+					.dropdown {
+						opacity: 1;
+						top: 26px;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	.dropdown {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top:20px;
+		left:0;
+		box-shadow: 0 10px 24px 0 rgba(198,198,198,0.35);
+		font-size: 17px;
+		font-family: $ubuntu-reg;
+		line-height: 21px;
+		background: $white;
+		border: 2px solid $gold;
+		text-transform: none;
+		padding: 10px 25px;
+		transition: opacity 0.5s ease, top 0.5s ease;
+		z-index: 5;
+
+		li {
+			white-space: nowrap;
+			padding: 10px 0;
+		}
+	}
+}
+.header-r-side {
+	display: flex;
+	width: 300px;
+	flex-shrink: 0;
+	justify-content: space-between;
+}
+.header-contacts {
+	line-height: 27px;
+	padding: 26px 0 0;
+
+	strong {
+		display: block;
+		font-size: 24px;
+		color: $black;
+	}
+}
+.languages {
+	margin: 25px 0 0;
+	font-family: $ubuntu-bold;
+	border: 1px solid $blue;
+	padding: 10px 22px 10px 20px;
+	border-radius: 3px;
+	align-self: flex-start;
+
+	a {
+		&:after {
+			@include arrow(8px, 8px, $blue, 1px, 35deg);
+			margin: 7px 0 0 9px;
+		}
+		&:hover {
+			&:after {
+				border-color: $red;
+			}
+		}
+	}
+}

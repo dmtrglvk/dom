@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cssmin = require('gulp-cssmin'),
     browserify = require('gulp-browserify'),
-    scss2less = require('gulp-scss2less'),
     minify = require('gulp-minify'),
     webpack = require('webpack'),
     webpackStream = require('webpack-stream');

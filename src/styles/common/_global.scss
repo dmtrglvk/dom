@@ -1,8 +1,7 @@
 body {
-  width: 100%;
   background-color: $white;
-  font: 18px/29px $ubuntu-light;
-  color: $black;
+  font: 18px/28px $ubuntu-reg;
+  color: $grey;
   & > svg {
     position: absolute;
     top: -9999px;
@@ -15,4 +14,25 @@ body {
 }
 a {
   text-decoration: none;
+  color: $blue;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $red;
+  }
+}
+.page {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.wrapper {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
 }
