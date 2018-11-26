@@ -115,6 +115,54 @@ gulp.task('scripts', function() {
         .pipe(reload({stream:true}));
 });
 
+gulp.task('scripts-build', function() {
+  return gulp.src('./src/js/main.js')
+      .pipe(webpackStream({
+        entry: {
+          app: './src/js/app.js'
+        },
+        output: {
+          filename: '[name].js',
+          chunkFilename: '[name].js',
+        },
+        mode: 'production',
+        module: {
+          rules: [
+            {
+              test: /\.(js)$/,
+              exclude: /(node_modules)/,
+              loader: 'babel-loader',
+              query: {
+                presets: ['env']
+              }
+            }
+          ]
+        },
+        plugins: [
+          new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            objectFit: 'object-fit-images'
+          })
+        ],
+        optimization: {
+          splitChunks: {
+            cacheGroups: {
+              commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all'
+              }
+            }
+          },
+          runtimeChunk: false
+        }
+      }))
+      .pipe(gulp.dest('./web/js/'))
+      .pipe(reload({stream:true}));
+});
+
 gulp.task('imagemin', function() {
     gulp.src('./src/images/*.{jpg,png,gif,svg}')
         .pipe(imagemin())
@@ -138,4 +186,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['templates', 'styles', 'scripts', 'svg', 'imagemin', 'copy', 'watch', 'browser-sync']);
-gulp.task('build', ['templates', 'styles', 'scripts', 'svg', 'imagemin', 'copy', 'browser-sync']);
+gulp.task('build', ['templates', 'styles', 'scripts-build', 'svg', 'imagemin', 'copy', 'browser-sync']);
