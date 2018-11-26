@@ -118,7 +118,7 @@
 			&.with-dropdown {
 				&>a {
 					&:after {
-						@include arrow(8px, 8px, $blue, 2px, 35deg);
+						@include arrow(8px, 8px, 2px, 35deg);
 						margin: 5px 0 0 10px;
 					}
 				}
@@ -127,7 +127,7 @@
 						color: $red;
 
 						&:after {
-							@include arrow(8px, 8px, $red, 2px, -145deg);
+							@include arrow(8px, 8px, 2px, -145deg);
 							margin-top: 10px;
 						}
 					}
@@ -189,7 +189,7 @@
 
 	a {
 		&:after {
-			@include arrow(8px, 8px, $blue, 1px, 35deg);
+			@include arrow(8px, 8px, 1px, 35deg);
 			margin: 7px 0 0 9px;
 		}
 		&:hover {

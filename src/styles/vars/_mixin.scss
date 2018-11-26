@@ -1,10 +1,11 @@
-@mixin arrow($width, $height, $border_color, $border_width, $rotate) {
+@mixin arrow($width, $height, $border_width, $rotate) {
 	content: "";
 	display: inline-block;
 	vertical-align: top;
 	transform: rotate($rotate) skewX(-15deg);
 	width: $width;
 	height: $height;
-	border: solid $border_color;
+	border-style: solid;
+	border-color: inherit;
 	border-width: 0 $border_width $border_width 0;
 }
