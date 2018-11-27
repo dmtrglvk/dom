@@ -36,11 +36,21 @@ a {
 .main {
   flex-grow: 1;
   padding: 200px 0 0;
+
+  h3 {
+    font: 42px/50px $ubuntu-bold;
+    margin: 0 0 20px;
+    color: $black;
+  }
 }
 .wrapper {
   max-width: 1280px;
   padding: 0 20px;
   margin: 0 auto;
+
+  .main & {
+    max-width: 1240px;
+  }
 }
 .flexbox {
   display: flex;

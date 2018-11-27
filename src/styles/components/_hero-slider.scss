@@ -1,12 +1,43 @@
 .hero-slider {
-    margin: -200px 0 0;
+    margin: -200px 0 145px;
     height: 800px;
+    position: relative;
 
     .bx-wrapper {
         height: 100%;
     }
     .bx-viewport {
         height: 100%;
+    }
+    .bx-controls {
+        position: absolute;
+        width: 100%;
+        bottom: 120px;
+        left: 0;
+        z-index: 55;
+
+        .bx-pager {
+            @extend .wrapper;
+            display: flex;
+        }
+        .bx-pager-item {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-indent: -9999px;
+            overflow: hidden;
+            margin: 0 25px 0 0;
+
+            a {
+                display: block;
+                height: 100%;
+                background: $gold;
+
+                &.active {
+                    background: $blue;
+                }
+            }
+        }
     }
 }
 .hero-slider-wrapper {

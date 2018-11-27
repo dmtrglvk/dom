@@ -1,12 +1,36 @@
 {% include '../common/head.twig' %}
 
 <main class="page">
-    {% include '../common/header.twig' %}
-    <article class="main">
-        {% include '../components/hero-slider.twig' %}
-    </article>
-    {% include '../common/footer.twig' %}
-</main>
 
+    {% include '../common/header.twig' %}
+
+    <article class="main">
+
+        {% include '../components/hero-slider.twig' %}
+
+        <div class="wrapper">
+            <div class="about-section">
+                <h3>О компании</h3>
+                <div class="cols flexbox">
+                    <p>Архитектурно-строительная компания основана в 1997 году. Одним из ключевых направлений деятельности  является проектирование и строительство частных домов. Мы работаем в Европе с 2009 года. Накопленный опыт мы постоянно совершенствуем с учетом новых современных технологий и материалов и дополняем европейскими методами строительного производства и проектирования.  </p>
+                    <p>Мы применяем комплексный подход: разрабатываем индивидуальный архитектурный проект загородного дома, осуществляем строительство и отделку под ключ, полностью отвечаем за декор жилого пространства, а также за ландшафтный дизайн прилегающего к дому участка. </p>
+                </div>
+            </div>
+
+            {% include '../components/principles.twig' %}
+
+        </div>
+
+        <div class="categories">
+            <div class="wrapper">
+                {% include '../components/categories.twig' %}
+            </div>
+        </div>
+
+    </article>
+
+    {% include '../common/footer.twig' %}
+
+</main>
 
 {% include '../common/end.twig' %}

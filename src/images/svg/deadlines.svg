@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 56 45.5">
+	<style>
+		.st3{fill:#fff}.st7{fill:#e9eaeb}.st8{fill:#bc9f62}
+	</style>
+	<path d="M.9 8.8h54.3v32.4H.9z" class="st3"/>
+	<path fill="#ffecc7" stroke="#bc9f62" stroke-miterlimit="10" stroke-width="2" d="M18.4 21.9h7v5.3h-7z"/>
+	<path d="M.9 41.1h54.3v3.5H.9z" class="st7"/>
+	<path d="M42.9 13.1h7v5.3h-7z" class="st3"/>
+	<path d="M.9.9h54.3v7H.9z" class="st7"/>
+	<path d="M6.1 21.9h7v5.3h-7zM30.6 30.6h7v5.3h-7z" class="st3"/>
+	<path d="M56 45.5H0v-4.4h1.8v2.7h52.5v-2.7H56z" class="st8"/>
+	<path d="M0 7.9h1.8v33.3H0zM54.3 7.9h1.8v33.3h-1.8zM26.3 19.3h-8.8v-7h8.8v7zm-7-1.8h5.3V14h-5.3v3.5zM38.5 19.3h-8.8v-7h8.8v7zm-7-1.8h5.3V14h-5.3v3.5zM50.8 19.3H42v-7h8.8v7zm-7-1.8H49V14h-5.3v3.5zM14 28H5.3v-7H14v7zm-7-1.7h5.3v-3.5H7v3.5zM26.3 28h-8.8v-7h8.8v7zm-7-1.7h5.3v-3.5h-5.3v3.5zM38.5 28h-8.8v-7h8.8v7zm-7-1.7h5.3v-3.5h-5.3v3.5zM50.8 28H42v-7h8.8v7zm-7-1.7H49v-3.5h-5.3v3.5zM14 36.8H5.3v-7H14v7zM7 35h5.3v-3.5H7V35zM26.3 36.8h-8.8v-7h8.8v7zm-7-1.8h5.3v-3.5h-5.3V35zM38.5 36.8h-8.8v-7h8.8v7zm-7-1.8h5.3v-3.5h-5.3V35z" class="st8"/>
+	<path d="M56 8.8H0V0h56v8.8zM1.8 7h52.5V1.8H1.8V7z" class="st8"/>
+	<path d="M29.8 3.5h1.8v1.8h-1.8zM33.3 3.5h1.8v1.8h-1.8zM36.8 3.5h1.8v1.8h-1.8zM17.5 3.5h1.8v1.8h-1.8zM21 3.5h1.8v1.8H21zM24.5 3.5h1.8v1.8h-1.8z" class="st8"/>
+</svg>
