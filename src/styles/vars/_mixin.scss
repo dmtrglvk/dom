@@ -9,3 +9,23 @@
 	border-color: inherit;
 	border-width: 0 $border_width $border_width 0;
 }
+@mixin button() {
+	font: 14px/40px $ubuntu-bold;
+	background: $red;
+	display: inline-block;
+	color: $white;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	text-align: center;
+	min-width: 178px;
+	box-shadow: 0 8px 24px 0 rgba(208,42,44,0.38);
+	text-transform: uppercase;
+
+	&:hover {
+		background: $light_red;
+	}
+	&:active {
+		background: $dark_red;
+		box-shadow: none;
+	}
+}

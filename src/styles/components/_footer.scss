@@ -1,3 +1,108 @@
 .footer {
     width: 100%;
+    border-bottom: 20px solid $gold;
+    font-size: 17px;
+    padding: 0 0 80px;
+}
+.footer-logo-wrapper {
+    display: flex;
+    width: 347px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    align-items: flex-end;
+    margin: 0 100px 0 0;
+}
+.footer-logo {
+    width: 182px;
+    height: 107px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../images/logo-footer.png) no-repeat;
+    display: block;
+    margin: 0;
+}
+.social-networks {
+    display: flex;
+
+    li {
+        width: 60px;
+        height: 60px;
+        border: 2px solid $blue;
+        border-radius: 3px;
+        margin: 0 0 0 20px;
+        box-sizing: border-box;
+    }
+    a {
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        &.ico-facebook {
+            background-image: url(../images/ico-facebook.png);
+        }
+        &.ico-instagram {
+            background-image: url(../images/ico-instagram.png);
+        }
+    }
+}
+.copyright {
+    font-family: $ubuntu-light;
+    color: $lightest_grey;
+    margin: 55px 0 0;
+}
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-col {
+    strong {
+        font: 17px/19px $ubuntu-bold;
+        display: block;
+        margin: 0 0 25px;
+        text-transform: uppercase;
+        color: $black;
+    }
+    ul {
+        li {
+            margin: 0 0 15px;
+        }
+        a {
+            &:before {
+                @include arrow(8px, 8px, 1px, -53deg);
+                margin: 8px 15px 0 0;
+            }
+        }
+    }
+}
+.footer-contacts {
+    color: $black;
+
+    .tel {
+        font: 32px/36px $ubuntu-bold;
+        display: block;
+        color: $gold;
+        margin: 0 0 20px;
+    }
+    p {
+        margin: 20px 0;
+    }
+    .email {
+        padding-left: 30px;
+        background: url(../images/ico-mailto.png) no-repeat 0 50%;
+    }
+    .check-map {
+        svg {
+            width: 19px;
+            height: 22px;
+            fill: $blue;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px 0 0;
+        }
+    }
 }
