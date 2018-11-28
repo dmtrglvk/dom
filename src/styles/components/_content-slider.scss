@@ -3,6 +3,11 @@
     box-shadow: 0 21px 24px 0 rgba(198,198,198,0.35);
     margin: 0 0 110px;
 
+    @include sm-down {
+        margin: 0 -20px 185px;
+        box-shadow: none;
+    }
+
     &:after {
         box-shadow: 0 21px 24px 0 rgba(198,198,198,0.35);
         content: "";
@@ -12,6 +17,10 @@
         left: 10px;
         background: #ececec;
         position: absolute;
+
+        @include sm-down {
+            display: none;
+        }
     }
     .bx-controls {
         position: absolute;
@@ -23,6 +32,15 @@
         .bx-controls-direction {
             display: flex;
             justify-content: space-between;
+        }
+
+        @include sm-down {
+            right: auto;
+            left: 50px;
+            bottom: -92px;
+        }
+        @include xs-down {
+            display: none;
         }
     }
     .bx-prev,
@@ -50,6 +68,11 @@
             margin-left: -4px;
         }
     }
+    .bx-viewport {
+        @include sm-down {
+            overflow: visible !important;
+        }
+    }
 }
 .content-slider-wrapper {
     position: relative;
@@ -60,6 +83,9 @@
     @include md-down {
         height: 473px;
     }
+    @include sm-down {
+        height: 553px;
+    }
 }
 .content-slide {
     position: absolute;
@@ -68,6 +94,11 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+
+    @include sm-down {
+        height: calc(100% - 175px);
+        overflow: visible;
+    }
 
     img {
         width: 100%;
@@ -99,6 +130,31 @@
             font-size: 28px;
             line-height: 36px;
         }
+        @include xs-down {
+            margin: 0;
+        }
+        @include xs2-down {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    &>p {
+        @include xs-down {
+            display: none;
+        }
+    }
+    @include sm-down {
+        top: auto;
+        right: 0;
+        left: 20px;
+        width: calc(100% - 40px);
+        bottom: -125px;
+        height: auto;
+        box-shadow: 0 21px 24px 0 rgba(198,198,198,0.35);
+        padding: 25px 40px 25px 170px;
+    }
+    @include xs2-down {
+        padding: 20px 15px 20px 90px;
     }
 }
 .content-slide-amounts {
@@ -115,5 +171,15 @@
         font-family: $ubuntu-bold;
         font-size: 42px;
         margin: 10px 0 0;
+    }
+    @include sm-down {
+        position: absolute;
+        left: 0;
+        top: 25px;
+        width: 170px;
+        text-align: center;
+    }
+    @include xs2-down {
+        width: 90px;
     }
 }

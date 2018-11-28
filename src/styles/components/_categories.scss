@@ -7,6 +7,14 @@
 		padding: 80px 0;
         margin: 0 0 65px;
 	}
+	@include sm-down {
+		padding: 60px 0;
+	}
+}
+.categories-wrapper {
+	@include xs-down {
+		flex-direction: column;
+	}
 }
 .category-item {
 	margin: 0 30px 0 0;
@@ -23,6 +31,10 @@
 		left: 10px;
 		background: #ececec;
 		position: absolute;
+
+		@include sm-down {
+			display: none;
+		}
 	}
 
 	a {
@@ -48,6 +60,19 @@
 			font-size: 28px;
 			line-height: 36px;
 		}
+		@include sm-down {
+			font-size: 22px;
+			line-height: 28px;
+		}
+		@include xs-down {
+			text-align: center;
+			margin: 0;
+			font-size: 24px;
+
+			br {
+				display: none;
+			}
+		}
 	}
 	p {
 		font-family: $ubuntu-light;
@@ -55,6 +80,10 @@
 		line-height: 24px;
 		margin: 0 0 20px;
 		color: $grey;
+
+		@include xs-down {
+			display: none;
+		}
 	}
 	.link {
 		font-family: $ubuntu-bold;
@@ -63,16 +92,34 @@
 		&:before {
 			@include arrow(8px, 8px, 2px, -53deg);
 			margin: 8px 15px 0 0;
+
+			@include sm-down {
+				margin-top: 9px;
+			}
 		}
 		@include md-down {
 			font-size: 17px;
+		}
+		@include sm-down {
+			font-size: 15px;
+		}
+		@include xs-down {
+			display: none;
 		}
 	}
 	@include md-down {
 		width: calc(100% / 3);
 		margin-right: 20px;
 	}
+	@include xs-down {
+		width: 100%;
+		margin: 0 0 20px;
+	}
 }
 .category-item-content {
 	padding: 30px;
+
+	@include sm-down {
+		padding: 20px;
+	}
 }

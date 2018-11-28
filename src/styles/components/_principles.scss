@@ -10,6 +10,12 @@
 	width: 25%;
 	box-sizing: border-box;
 
+	p {
+		@include xs2-down {
+			display: none;
+		}
+	}
+
 	&:last-of-type {
 		margin: 0;
 	}
@@ -20,6 +26,10 @@
         &:nth-child(2n) {
             margin-right: 0;
         }
+    }
+    @include xs-down {
+        width: 100%;
+        margin: 0 0 20px;
     }
 }
 .principles-heading {

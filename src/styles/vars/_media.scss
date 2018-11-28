@@ -28,18 +28,18 @@ $d-max: 319px;
 
 /* xs2 */
 $xs2-min: 320px;
-$xs2-max: 574px;
+$xs2-max: 479px;
 
 /* xs */
-$xs-min: 575px;
+$xs-min: 480px;
 $xs-max: 767px;
 
 /* sm */
 $sm-min: 768px;
-$sm-max: 969px;
+$sm-max: 884px;
 
 /* md */
-$md-min: 970px;
+$md-min: 885px;
 $md-max: 1229px;
 
 /* lg */
@@ -84,8 +84,8 @@ $xs-up: 'only screen and (min-width : #{$xs-min})'; // 575 and higher
     }
 }
 
-/* 768 px */
-$xs-down: 'only screen and (max-width : #{$xs-max})'; // 768 and lower
+/* 730 px */
+$xs-down: 'only screen and (max-width : #{$xs-max})'; // 730 and lower
 @mixin xs-down{
     @media #{$xs-down} {
         @content;
@@ -98,15 +98,15 @@ $sm-up: 'only screen and (min-width : #{$sm-min})'; // 768 and higher
     }
 }
 
-/* 970 px */
-$sm-down: 'only screen and (max-width : #{$sm-max})'; // 970 and lower
+/* 885 px */
+$sm-down: 'only screen and (max-width : #{$sm-max})'; // 885 and lower
 @mixin sm-down{
     @media #{$sm-down} {
         @content;
     }
 }
 
-$md-up: 'only screen and (min-width : #{$md-min})'; // 970 and higher
+$md-up: 'only screen and (min-width : #{$md-min})'; // 885 and higher
 @mixin md-up{
     @media #{$md-up} {
         @content;

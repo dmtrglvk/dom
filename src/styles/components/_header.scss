@@ -25,6 +25,13 @@
 			left: 100%;
 			top: 80px;
 		}
+		@include xs-down {
+			left: -20px;
+			top: 68px;
+		}
+		@include xs2-down {
+			top: 49px;
+		}
 	}
 
 	a {
@@ -37,10 +44,27 @@
 		@include md-down {
 			margin: 13px 0 0 45px;
 		}
+		@include xs-down {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			background-size: 100% 100%;
+		}
 	}
 	@include md-down {
 		height: 163px;
 		background-position: 0 100%;
+	}
+	@include xs-down {
+		background: none;
+		width: 91px;
+		height: 53px;
+		margin: 12px 0 0;
+	}
+	@include xs2-down {
+		width: 65px;
+		height: 38px;
+		margin: 9px 0 0;
 	}
 }
 .navigation {
@@ -252,6 +276,9 @@
 			overflow: auto;
 		}
     }
+	@include xs2-down {
+		top: 60px;
+	}
 }
 .header-r-side {
 	display: flex;
@@ -262,7 +289,14 @@
 	@include md-down {
 		width: calc(100% - 200px);
 		box-sizing: border-box;
-		padding: 0 30px 0 80px;
+		padding: 0 30px 0 5%;
+	}
+	@include xs-down {
+		width: calc(100% - 110px);
+		padding: 0;
+	}
+	@include xs2-down {
+		width: calc(100% - 65px);
 	}
 }
 .header-contacts {
@@ -277,10 +311,36 @@
 		@include md-down {
 			margin-right: 30px;
 		}
+		@include xs-down {
+			font-size: 20px;
+			margin: 0;
+		}
+		@include xs2-down {
+			font-size: 17px;
+		}
+	}
+	a {
+		@include xs2-down {
+			display: none;
+		}
 	}
 	@include md-down {
 		display: flex;
 		padding: 29px 0 0;
+	}
+	@include sm-down {
+		padding: 16px 0 0 11%;
+		flex-direction: column;
+		width: 55%;
+	}
+	@include xs-down {
+		width: 100%;
+		padding: 19px 0 0;
+		text-align: center;
+		font-size: 16px;
+	}
+	@include xs2-down {
+		padding: 15px 0 0;
 	}
 }
 .languages {
@@ -304,6 +364,15 @@
 	}
 	@include md-down {
 		margin: 15px 0 0;
+	}
+	@include xs-down {
+		margin: 20px 20px 0 10px;
+		width: 74px;
+		padding: 4px 11px;
+		font-size: 17px;
+	}
+	@include xs2-down {
+		display: none;
 	}
 }
 .menu-opener {
@@ -358,5 +427,8 @@
 		span {
 			display: none;
 		}
+	}
+	@include xs2-down {
+		margin: 20px 0 0;
 	}
 }

@@ -8,6 +8,22 @@
         padding: 70px 50px 80px;
         box-sizing: border-box;
     }
+    @include sm-down {
+        padding: 70px 0 80px;
+    }
+    @include xs-down {
+        border-top: 1px solid $gold;
+        margin-top: 75px;
+        padding: 60px 20px 70px;
+    }
+    @include xs2-down {
+        padding: 50px 0 60px;
+    }
+    .wrapper {
+        @include xs-down {
+            flex-direction: column;
+        }
+    }
 }
 .footer-logo-wrapper {
     display: flex;
@@ -17,6 +33,11 @@
     align-self: flex-start;
     align-items: flex-end;
     margin: 0 100px 0 0;
+
+    @include sm-down {
+        margin: 0 20px 0 0;
+        width: 324px;
+    }
 }
 .footer-logo {
     width: 182px;
@@ -24,8 +45,18 @@
     text-indent: -9999px;
     overflow: hidden;
     background: url(../images/logo-footer.png) no-repeat;
+    background-size: 100% 100%;
     display: block;
     margin: 0;
+
+    @include sm-down {
+        width: 159px;
+        height: 94px;
+    }
+    @include xs2-down {
+        width: 121px;
+        height: 72px;
+    }
 }
 .social-networks {
     display: flex;
@@ -58,6 +89,10 @@
     font-family: $ubuntu-light;
     color: $lightest_grey;
     margin: 55px 0 0;
+
+    @include xs-down {
+        margin: 30px 0;
+    }
 }
 .footer-content {
     width: 100%;
@@ -68,6 +103,9 @@
         .footer-contacts {
             display: none;
         }
+    }
+    @include xs2-down {
+        flex-direction: column;
     }
 }
 .footer-col {
@@ -81,6 +119,10 @@
     ul {
         li {
             margin: 0 0 15px;
+
+            @include xs-down {
+                margin: 0 0 5px;
+            }
         }
         a {
             &:before {
@@ -88,6 +130,9 @@
                 margin: 8px 15px 0 0;
             }
         }
+    }
+    @include xs2-down {
+        margin: 0 0 20px;
     }
 }
 .footer-contacts {
@@ -108,6 +153,21 @@
                 }
             }
         }
+    }
+    @include sm-down {
+        &>div {
+            width: 50%;
+        }
+    }
+    @include xs-down {
+        flex-direction: column;
+
+        &>div {
+            width: 100%;
+        }
+    }
+    @include xs2-down {
+        padding-top: 0;
     }
 
     .tel {

@@ -5,6 +5,14 @@
 	.cols {
 		p {
 			width: 48%;
+
+			@include sm-down {
+				width: 100%;
+				margin: 0 0 20px;
+			}
+		}
+		@include sm-down {
+			flex-direction: column;
 		}
 	}
 }

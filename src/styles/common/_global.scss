@@ -2,6 +2,12 @@ body {
   background-color: $white;
   font: 18px/28px $ubuntu-reg;
   color: $grey;
+
+  @include xs2-down {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   & > svg {
     position: absolute;
     top: -9999px;
@@ -51,6 +57,13 @@ a {
 
     @include md-down {
       text-align: center;
+    }
+    @include xs-down {
+      font-size: 36px;
+    }
+    @include xs2-down {
+      font-size: 28px;
+      line-height: 32px;
     }
   }
 }

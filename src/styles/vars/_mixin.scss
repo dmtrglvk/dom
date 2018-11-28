@@ -29,6 +29,9 @@
 		background: $dark_red;
 		box-shadow: none;
 	}
+    @include xs2-down {
+        padding: 5px 30px;
+    }
 }
 @mixin object-fit() {
 	object-fit: cover;

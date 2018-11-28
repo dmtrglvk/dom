@@ -7,6 +7,17 @@
         margin-bottom: 120px;
         height: 613px;
     }
+    @include sm-down {
+        height: 475px;
+        margin-bottom: 100px;
+    }
+    @include xs-down {
+        height: 348px;
+    }
+    @include xs2-down {
+        height: 253px;
+        margin-bottom: 80px;
+    }
 
     .bx-wrapper {
         height: 100%;
@@ -98,6 +109,21 @@
         @include md-down {
             font-size: 62px;
         }
+        @include sm-down {
+            font-size: 48px;
+            line-height: 50px;
+            margin: 0 0 20px;
+        }
+        @include xs-down {
+            font-size: 36px;
+            line-height: 44px;
+            max-width: 230px;
+        }
+        @include xs2-down {
+            font-size: 32px;
+            line-height: 39px;
+            margin: 0 0 15px;
+        }
     }
     p {
         font: 36px/48px $ubuntu-bold;
@@ -108,11 +134,23 @@
             line-height: 42px;
             max-width: 430px;
         }
+        @include sm-down {
+            font-size: 24px;
+            line-height: 32px;
+            max-width: 310px;
+            margin: 0 0 20px;
+        }
+        @include xs-down {
+            display: none;
+        }
     }
     .button {
         @include button();
     }
     @include md-down {
         padding-top: 50px;
+    }
+    @include sm-down {
+        padding-top: 70px;
     }
 }
