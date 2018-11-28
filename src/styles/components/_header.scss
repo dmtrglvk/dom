@@ -20,6 +20,11 @@
 		position: absolute;
 		top: 100px;
 		left: -999em;
+
+		@include md-down {
+			left: 100%;
+			top: 80px;
+		}
 	}
 
 	a {
@@ -27,6 +32,15 @@
 		width: 128px;
 		height: 75px;
 		margin: 33px 0 0 45px;
+		background: url(../images/logo-header.png) no-repeat;
+
+		@include md-down {
+			margin: 13px 0 0 45px;
+		}
+	}
+	@include md-down {
+		height: 163px;
+		background-position: 0 100%;
 	}
 }
 .navigation {
@@ -41,9 +55,26 @@
 		font-family: $ubuntu-bold;
 		margin: 0 0 0 25px;
 
+        @include md-down {
+            flex-direction: column;
+			margin: 0;
+
+            a {
+                color: $white;
+
+				&:hover {
+					color: $gold;
+				}
+            }
+        }
+
 		&>li {
 			position: relative;
 			margin: 0 25px 0 0;
+
+			@include md-down {
+				margin: 0 0 25px;
+			}
 
 			&:before {
 				content: "";
@@ -53,6 +84,10 @@
 				position: absolute;
 				top: 60px;
 				left: -25px;
+
+				@include md-down {
+					display: none;
+				}
 			}
 			&:after {
 				content: "";
@@ -62,6 +97,10 @@
 				position: absolute;
 				top: 60px;
 				left: 0;
+
+				@include md-down {
+					display: none;
+				}
 			}
 
 			&.current {
@@ -73,6 +112,10 @@
 					height: 4px;
 					top: 59px;
 					background: $red;
+
+					@include md-down {
+						display: none;
+					}
 				}
 				& + li {
 					&:before {
@@ -92,6 +135,10 @@
 					top: 60px;
 					left: -25px;
 					display: block !important;
+
+					@include md-down {
+						display: none !important;
+					}
 				}
 				&:after {
 					content: "";
@@ -117,25 +164,32 @@
 			}
 
 			&.with-dropdown {
-				&>a {
-					&:after {
-						@include arrow(8px, 8px, 2px, 35deg);
-						margin: 5px 0 0 10px;
-					}
-				}
-				&:hover {
+				@include lg-up {
 					&>a {
-						color: $red;
-
 						&:after {
-							@include arrow(8px, 8px, 2px, -145deg);
-							margin-top: 10px;
+							@include arrow(8px, 8px, 2px, 35deg);
+							margin: 5px 0 0 10px;
+
+							@include md-down {
+								display: none;
+							}
 						}
 					}
-					.dropdown {
-						opacity: 1;
-						top: 26px;
-						visibility: visible;
+					&:hover {
+
+						&>a {
+							color: $red;
+
+							&:after {
+								@include arrow(8px, 8px, 2px, -145deg);
+								margin-top: 10px;
+							}
+						}
+						.dropdown {
+							opacity: 1;
+							top: 26px;
+							visibility: visible;
+						}
 					}
 				}
 			}
@@ -158,17 +212,58 @@
 		transition: opacity 0.5s ease, top 0.5s ease;
 		z-index: 5;
 
+		@include md-down {
+			position: static;
+			visibility: visible;
+			opacity: 1;
+			background: none;
+			border:0;
+			box-shadow: none;
+			padding: 20px 0 0;
+
+			a {
+				&:before {
+					@include arrow(8px, 8px, 1px, -53deg);
+					margin: 5px 10px 0 0;
+				}
+			}
+		}
+
 		li {
 			white-space: nowrap;
 			padding: 10px 0;
 		}
 	}
+    @include md-down {
+        position: absolute;
+        top: 82px;
+        right: 0;
+		transform: translateX(100%);
+        width: 320px;
+        background: $blue;
+		font-size: 17px;
+		padding: 30px 40px;
+		height: calc(100vh - 82px);
+		box-sizing: border-box;
+		transition: transform 0.4s ease-in-out;
+
+		.menu-opened & {
+			transform: translateX(0);
+			overflow: auto;
+		}
+    }
 }
 .header-r-side {
 	display: flex;
 	width: 300px;
 	flex-shrink: 0;
 	justify-content: space-between;
+
+	@include md-down {
+		width: calc(100% - 200px);
+		box-sizing: border-box;
+		padding: 0 30px 0 80px;
+	}
 }
 .header-contacts {
 	line-height: 27px;
@@ -178,6 +273,14 @@
 		display: block;
 		font-size: 24px;
 		color: $black;
+
+		@include md-down {
+			margin-right: 30px;
+		}
+	}
+	@include md-down {
+		display: flex;
+		padding: 29px 0 0;
 	}
 }
 .languages {
@@ -197,6 +300,63 @@
 			&:after {
 				border-color: $red;
 			}
+		}
+	}
+	@include md-down {
+		margin: 15px 0 0;
+	}
+}
+.menu-opener {
+    width: 34px;
+    height: 2px;
+    padding: 7px 0;
+    position: relative;
+    margin: 32px 0 0;
+
+    span {
+        height: 2px;
+        display: block;
+        background: $blue;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $blue;
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+
+    @include lg-up {
+        display: none;
+    }
+	.menu-opened & {
+		&:after,
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			transition: transform 0.4s ease;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+		span {
+			display: none;
 		}
 	}
 }

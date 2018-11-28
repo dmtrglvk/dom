@@ -3,6 +3,11 @@
     height: 800px;
     position: relative;
 
+    @include md-down {
+        margin-bottom: 120px;
+        height: 613px;
+    }
+
     .bx-wrapper {
         height: 100%;
     }
@@ -19,6 +24,10 @@
         .bx-pager {
             @extend .wrapper;
             display: flex;
+
+            @include md-down {
+                justify-content: center;
+            }
         }
         .bx-pager-item {
             width: 10px;
@@ -38,6 +47,10 @@
                 }
             }
         }
+        @include md-down {
+            top: auto;
+            bottom: -30px;
+        }
     }
 }
 .hero-slider-wrapper {
@@ -55,11 +68,20 @@
         left: 50%;
         transform: translate(-50%, 0);
         @include object-fit();
+
+        @include md-down {
+            object-position: 86% 0;
+            font-family: 'object-fit: cover; object-position: 86% 0;';
+        }
     }
     .wrapper {
         height: 100%;
         display: flex;
         align-items: center;
+
+        @include md-down {
+            max-width: 840px;
+        }
     }
 }
 .hero-slide-content {
@@ -72,12 +94,25 @@
         font: 72px/80px $ubuntu-bold;
         color: $gold;
         margin: 0 0 20px;
+
+        @include md-down {
+            font-size: 62px;
+        }
     }
     p {
         font: 36px/48px $ubuntu-bold;
         margin: 0 0 35px;
+
+        @include md-down {
+            font-size: 32px;
+            line-height: 42px;
+            max-width: 430px;
+        }
     }
     .button {
         @include button();
+    }
+    @include md-down {
+        padding-top: 50px;
     }
 }

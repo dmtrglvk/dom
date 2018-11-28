@@ -1,5 +1,9 @@
 .principles {
 	margin: 0 0 100px;
+
+    @include md-down {
+        flex-wrap: wrap;
+    }
 }
 .principles-col {
 	margin: 0 30px 0 0;
@@ -9,6 +13,14 @@
 	&:last-of-type {
 		margin: 0;
 	}
+    @include md-down {
+        width: calc(50% - 30px);
+        margin-bottom: 30px;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
 }
 .principles-heading {
 	display: flex;

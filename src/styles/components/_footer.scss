@@ -3,6 +3,11 @@
     border-bottom: 20px solid $gold;
     font-size: 17px;
     padding: 70px 0 80px;
+
+    @include md-down {
+        padding: 70px 50px 80px;
+        box-sizing: border-box;
+    }
 }
 .footer-logo-wrapper {
     display: flex;
@@ -58,6 +63,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include md-down {
+        .footer-contacts {
+            display: none;
+        }
+    }
 }
 .footer-col {
     strong {
@@ -82,11 +93,32 @@
 .footer-contacts {
     color: $black;
 
+    @include md-down {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 45px;
+
+        &>div {
+            p {
+                margin: 0 0 20px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
     .tel {
         font: 32px/36px $ubuntu-bold;
         display: block;
         color: $gold;
         margin: 0 0 20px;
+
+        @include md-down {
+            margin: 0 0 12px;
+        }
     }
     p {
         margin: 20px 0;
@@ -104,5 +136,10 @@
             vertical-align: top;
             margin: 0 5px 0 0;
         }
+    }
+}
+.mobile-footer-content {
+    @include lg-up {
+        display: none;
     }
 }

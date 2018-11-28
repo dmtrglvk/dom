@@ -3,6 +3,10 @@
     position: relative;
     overflow: hidden;
 
+    @include md-down {
+        height: 480px;
+    }
+
     .cover-image {
         @include object-fit();
         width: 100%;
@@ -29,6 +33,11 @@
     &>img {
         flex-shrink: 0;
         margin-left: -50px;
+
+        @include md-down {
+            margin: 0 50px 0 0;
+            max-width: 35%;
+        }
     }
 }
 .content-hero-text {
@@ -36,12 +45,23 @@
     font: 32px/40px $ubuntu-reg;
     padding: 150px 0 0;
 
+    @include md-down {
+        font-size: 28px;
+        line-height: 36px;
+        padding: 75px 0 0;
+    }
+
     strong {
         display: block;
         font: 64px/77px $ubuntu-bold;
 
         &>span {
             color: $gold;
+        }
+
+        @include md-down {
+            font-size: 42px;
+            line-height: 50px;
         }
     }
     p {

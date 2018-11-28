@@ -3,6 +3,7 @@ import objectFitImages from 'object-fit-images'
 import paroller from 'paroller.js'
 import heroSlider from './components/hero-slider'
 import contentSlider from './components/content-slider'
+import mobileMenu from './components/mobile-menu'
 
 $(function(){
 
@@ -13,6 +14,7 @@ $(function(){
 
     heroSlider.init();
     contentSlider.init();
+    mobileMenu.init();
 
     if($('.parallax-image').length) {
       $('.parallax-image').paroller();

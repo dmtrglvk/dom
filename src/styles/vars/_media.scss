@@ -40,10 +40,10 @@ $sm-max: 969px;
 
 /* md */
 $md-min: 970px;
-$md-max: 1199px;
+$md-max: 1229px;
 
 /* lg */
-$lg-min: 1200px;
+$lg-min: 1230px;
 $lg-max: 1439px;
 
 /* lg2 */
@@ -114,13 +114,13 @@ $md-up: 'only screen and (min-width : #{$md-min})'; // 970 and higher
 }
 
 /* 1220 px */
-$md-down: 'only screen and (max-width : #{$md-max})'; // 1220 and lower
+$md-down: 'only screen and (max-width : #{$md-max})'; // 1229 and lower
 @mixin md-down{
     @media #{$md-down} {
         @content;
     }
 }
-$lg-up: 'only screen and (min-width : #{$lg-min})'; // 1220 and higher
+$lg-up: 'only screen and (min-width : #{$lg-min})'; // 1229 and higher
 @mixin lg-up{
     @media #{$lg-up} {
         @content;
