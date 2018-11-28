@@ -2,6 +2,7 @@ import './components/svg'
 import objectFitImages from 'object-fit-images'
 import paroller from 'paroller.js'
 import heroSlider from './components/hero-slider'
+import contentSlider from './components/content-slider'
 
 $(function(){
 
@@ -11,4 +12,10 @@ $(function(){
     }
 
     heroSlider.init();
+    contentSlider.init();
+
+    if($('.parallax-image').length) {
+      $('.parallax-image').paroller();
+    }
+
 });

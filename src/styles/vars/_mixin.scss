@@ -20,6 +20,7 @@
 	min-width: 178px;
 	box-shadow: 0 8px 24px 0 rgba(208,42,44,0.38);
 	text-transform: uppercase;
+    border-radius: 3px;
 
 	&:hover {
 		background: $light_red;
@@ -28,4 +29,8 @@
 		background: $dark_red;
 		box-shadow: none;
 	}
+}
+@mixin object-fit() {
+	object-fit: cover;
+	font-family: object-fit\:cover;
 }

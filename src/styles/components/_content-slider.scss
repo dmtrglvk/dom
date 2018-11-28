@@ -1,0 +1,110 @@
+.content-slider {
+    position: relative;
+    box-shadow: 0 21px 24px 0 rgba(198,198,198,0.35);
+    margin: 0 0 110px;
+
+    &:after {
+        box-shadow: 0 21px 24px 0 rgba(198,198,198,0.35);
+        content: "";
+        height: 100%;
+        width: calc(100% - 20px);
+        bottom: -10px;
+        left: 10px;
+        background: #ececec;
+        position: absolute;
+    }
+    .bx-controls {
+        position: absolute;
+        bottom: 50px;
+        right: 236px;
+        width: 110px;
+        z-index: 55;
+
+        .bx-controls-direction {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .bx-prev,
+    .bx-next {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $blue;
+        text-indent: -9999px;
+        position: relative;
+        overflow: hidden;
+        color: $white;
+
+        &:before {
+            @include arrow(8px, 8px, 2px, -53deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -5px 0 0 -6px;
+        }
+    }
+    .bx-prev {
+        &:before {
+            transform: rotate(134deg);
+            margin-left: -4px;
+        }
+    }
+}
+.content-slider-wrapper {
+    position: relative;
+    z-index: 5;
+    background: $white;
+    height: 600px;
+}
+.content-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        @include object-fit();
+    }
+}
+.content-slide-box {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: calc(100% - 20px);
+    width: 376px;
+    box-sizing: border-box;
+    padding: 35px 40px 0;
+    background: $white;
+    font: 16px/24px $ubuntu-light;
+
+    &>strong {
+        font: 32px/42px $ubuntu-bold;
+        display: block;
+        margin: 0 0 20px;
+        color: $black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.content-slide-amounts {
+    color: $light_grey;
+    font: 15px/42px $ubuntu-reg;
+
+    &>* {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    strong {
+        color: $gold;
+        font-family: $ubuntu-bold;
+        font-size: 42px;
+        margin: 10px 0 0;
+    }
+}
