@@ -37,3 +37,17 @@
 	object-fit: cover;
 	font-family: 'object-fit: cover;';
 }
+@mixin shadow-box() {
+	box-shadow: 0 21px 24px 0 rgba(198,198,198,.35);
+	position: relative;
+	&:after {
+		content: "";
+		box-shadow: 0 21px 24px 0 rgba(198,198,198,.35);
+		height: 100%;
+		width: calc(100% - 20px);
+		position: absolute;
+		bottom: -10px;
+		left: 10px;
+		background: #ececec;
+	}
+}

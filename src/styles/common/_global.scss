@@ -48,7 +48,17 @@ a {
 }
 .main {
   flex-grow: 1;
-  padding: 200px 0 0;
+  padding: 180px 0 0;
+
+  @include md-down {
+    padding: 150px 0 0;
+  }
+  @include xs-down {
+    padding: 100px 0 0;
+  }
+  @include xs2-down {
+    padding: 85px 0 0;
+  }
 
   h3 {
     font: 42px/50px $ubuntu-bold;
@@ -79,4 +89,14 @@ a {
 .flexbox {
   display: flex;
   justify-content: space-between;
+}
+::placeholder {
+  color: $lightest_grey;
+  opacity: 1;
+  font-family: $ubuntu-light;
+}
+
+:-ms-input-placeholder {
+  color: $lightest_grey;
+  font-family: $ubuntu-light;
 }
