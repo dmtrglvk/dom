@@ -11,6 +11,7 @@
 	background: url(../images/logo.png) no-repeat;
 	flex-shrink: 0;
 	position: relative;
+	display: block;
 
 	&:before {
 		content: "";
@@ -70,7 +71,7 @@
 }
 .navigation {
 	padding: 40px 0 0;
-	width: 100%;
+	width: calc(100% - 520px);
 	position: relative;
 
 	&>ul {

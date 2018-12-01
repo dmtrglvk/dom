@@ -95,14 +95,20 @@
     }
 }
 .footer-content {
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    width: calc(100% - 447px);
 
     @include md-down {
         .footer-contacts {
             display: none;
         }
+    }
+    @include sm-down {
+        width: calc(100% - 344px);
+    }
+    @include xs-down {
+        width: 100%;
     }
     @include xs2-down {
         flex-direction: column;
