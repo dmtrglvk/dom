@@ -1,0 +1,140 @@
+.service-box {
+	@include shadow-box();
+	margin: 0 0 40px;
+
+	&:last-child {
+		margin-bottom: 80px;
+
+		@include sm-down {
+			margin: 0 0 40px;
+		}
+		@include xs2-down {
+			margin: 0 -20px 40px;
+		}
+	}
+	@include sm-down {
+		margin: 0 0 20px;
+		&:after {
+			display: none;
+		}
+	}
+	@include xs2-down {
+		margin: 0 -20px 20px;
+	}
+}
+.service-box-content {
+	background: $white;
+	position: relative;
+	z-index: 5;
+	display: flex;
+	justify-content: space-between;
+	color: $black;
+	padding: 30px;
+	font-size: 17px;
+
+	@include sm-down {
+		flex-direction: column;
+		padding: 20px;
+	}
+}
+.service-box-list {
+	width: 60%;
+	padding-right: 25px;
+	box-sizing: border-box;
+
+	@include md-down {
+		width: 50%;
+		padding-right: 12.5px;
+	}
+	@include sm-down {
+		width: 100%;
+		padding: 0 0 20px;
+	}
+
+	h4 {
+		font: 42px/48px $ubuntu-bold;
+		margin: 0 0 25px;
+
+		@include md-down {
+			font-size: 36px;
+		}
+		@include sm-down {
+			text-align: center;
+		}
+		@include xs-down {
+			font-size: 32px;
+			margin: 0 0 20px;
+		}
+		@include xs2-down {
+			font-size: 24px;
+			margin: 0 0 10px;
+		}
+	}
+	ul {
+		@include xs-down {
+			border-bottom: 1px solid $light_gold;
+		}
+		li {
+			display: flex;
+			border-top: 1px solid $light_gold;
+			padding: 15px 0;
+		}
+		svg {
+			width: 32px;
+			height: 28px;
+			display: block;
+			flex-shrink: 0;
+			margin: 0 19px 0 0;
+		}
+	}
+}
+.service-box-description {
+	width: 40%;
+
+	@include md-down {
+		width: 50%;
+		padding-left: 12.5px;
+		box-sizing: border-box;
+	}
+	@include sm-down {
+		width: 100%;
+		padding: 0;
+	}
+
+	p {
+		margin: 0 0 25px;
+
+		@include xs-down {
+			display: none;
+		}
+	}
+}
+.service-order-row {
+	display: flex;
+	align-items: center;
+
+	.button {
+		@include button();
+		margin: 0 34px 0 0;
+		flex-shrink: 0;
+
+		@include xs2-down {
+			min-width: 1px;
+			margin: 0 15px 0 0;
+		}
+	}
+}
+.service-price {
+	&>* {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.service-price-amount {
+		font-size: 42px;
+		font-family: $ubuntu-bold;
+		margin-top: 13px;
+	}
+	.lower {
+		margin-top: 17px;
+	}
+}

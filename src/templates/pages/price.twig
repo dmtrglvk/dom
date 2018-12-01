@@ -1,0 +1,45 @@
+{% include '../common/head.twig' %}
+
+<main class="page">
+
+    {% include '../common/header.twig' %}
+
+    <article class="main">
+
+        <div class="wrapper">
+            <div class="about-section one-column">
+                <h3>Стоимость наших работ</h3>
+                <div class="cols flexbox">
+                    <p>У Вас есть точное представление о том, что Вы хотите получить от интерьера, но необходимо что-то поменять: форму потолка, заменить напольные и настенные покрытия, при этом не меняя существующую электрическую схему помещений.  Дизайн-проект “ЭКОНОМНЫЙ” подходит в случае, если Вы не хотите вкладывать излишние затраты на ремонт помещения, но для Вас необходимо быть уверенным в том, что Вы получите нужный результат от потраченных средств.</p>
+                </div>
+            </div>
+
+            {% set
+                serviceBoxVars = {
+                    'serviceBoxHeading': 'Дизайн интерьера',
+                    'servicePriceAmount': '€20'
+                }
+            %}
+            {% set
+                serviceBoxVars2 = {
+                    'serviceBoxHeading': 'Ландшафтный дизайн',
+                    'servicePriceAmount': '€38'
+                }
+            %}
+
+            {% include '../components/price-box.twig' %}
+
+            {% include '../components/service-box.twig' with serviceBoxVars %}
+            {% include '../components/service-box.twig' with serviceBoxVars2 %}
+
+        </div>
+
+        {% include '../components/content-hero.twig' %}
+
+    </article>
+
+    {% include '../common/footer.twig' %}
+
+</main>
+
+{% include '../common/end.twig' %}

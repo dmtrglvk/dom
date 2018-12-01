@@ -54,6 +54,7 @@
 	@include md-down {
 		height: 163px;
 		background-position: 0 100%;
+		margin-left: -20px;
 	}
 	@include xs-down {
 		background: none;
@@ -261,18 +262,17 @@
     @include md-down {
         position: absolute;
         top: 82px;
-        right: 0;
-		transform: translateX(100%);
+        right: -320px;
         width: 320px;
         background: $blue;
 		font-size: 17px;
 		padding: 30px 40px;
 		height: calc(100vh - 82px);
 		box-sizing: border-box;
-		transition: transform 0.4s ease-in-out;
+		transition: right 0.4s ease-in-out;
 
 		.menu-opened & {
-			transform: translateX(0);
+			right: 0;
 			overflow: auto;
 		}
     }
