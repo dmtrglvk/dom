@@ -1,0 +1,194 @@
+.portfolio-item-gallery {
+	display: none;
+}
+.portfolio-items-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.portfolio-item {
+	width: calc(50% - 15px);
+	margin: 0 0 45px;
+
+	&>a {
+		display: block;
+		height:100%;
+	}
+
+	@include md-down {
+		width: calc(50% - 10px);
+	}
+	@include sm-down {
+		margin: 0 0 35px;
+	}
+	@include xs-down {
+		width: 100%;
+	}
+
+	strong {
+		display: block;
+		font-size: 24px;
+		margin: 0 0 15px;
+
+		@include sm-down {
+			font-size: 20px;
+		}
+	}
+}
+.portfolio-img {
+	height:293px;
+	@include shadow-box();
+	margin: 0 0 35px;
+
+	@include md-down {
+		height: 232px;
+	}
+	@include sm-down {
+		box-shadow: none;
+		height: 175px;
+		margin-bottom: 15px;
+
+		&:after {
+			display: none;
+		}
+	}
+	@include xs-down {
+		height: 217px;
+	}
+
+	img {
+		display: block;
+		position: relative;
+		z-index: 5;
+		@include object-fit();
+		width: 100%;
+		height: 100%;
+	}
+}
+.portfolio-item-images {
+	display: flex;
+	font: 16px/20px $ubuntu-light;
+	color: $grey;
+
+	svg {
+		fill: $gold;
+		stroke: $gold;
+		width: 23px;
+		height: 20px;
+		margin: 0 7px 0 0;
+	}
+}
+.portfolio-get-more-items {
+	display: block;
+	padding: 0;
+	border: 2px solid $blue;
+	border-radius: 3px;
+	text-align: center;
+	margin: 0 0 120px;
+	padding-top: 2px;
+
+	@include md-down {
+		margin: 0 0 80px;
+	}
+	@include sm-down {
+		margin: 0 0 60px;
+	}
+
+	span {
+		display: inline-block;
+		font: 14px/54px $ubuntu-bold;
+		text-transform: uppercase;
+
+		&:before {
+			@include arrow(8px, 8px, 2px, 35deg);
+			margin: 18px 11px 0 0;
+		}
+	}
+}
+.portfolio-tab {
+	display: none;
+
+	&.selected {
+		display: block;
+	}
+}
+.portfolio-tabs {
+	margin: 0 0 45px;
+	position: relative;
+
+	@include xs-down {
+		margin: 0 0 40px;
+	}
+
+	ul {
+		display: flex;
+		font: 20px/30px $ubuntu-reg;
+
+		@include md-down {
+			justify-content: center;
+		}
+		@include xs-down {
+			position: absolute;
+			top: 60px;
+			left: 0;
+			width: 100%;
+			flex-direction: column;
+			font-size: 17px;
+			background: $white;
+			z-index: 10;
+			padding: 15px 22px;
+			border-radius: 0 0 3px 3px;
+			box-sizing: border-box;
+			display: none;
+			box-shadow: 0 10px 24px 0 rgba(198,198,198,.35);
+
+			&.active {
+				display: block;
+			}
+		}
+
+		li {
+			margin: 0 35px 0 0;
+
+			&:last-of-type {
+				margin: 0;
+			}
+			@include xs-down {
+				margin: 0;
+				padding: 5px 0;
+			}
+		}
+
+		.selected {
+			color: $gold;
+		}
+	}
+}
+.portfolio-current-tab {
+	display: none;
+
+	@include xs-down {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		border: 2px solid $blue;
+		border-radius: 3px;
+		padding: 14px 20px;
+		color: $blue;
+
+		&:before {
+			@include arrow(8px, 8px, 2px, 35deg);
+			position: absolute;
+			right: 20px;
+			top: 21px;
+		}
+		&.opened {
+			border-radius: 3px 3px 0 0;
+
+			&:before {
+				transform: rotate(-135deg);
+				top: 25px;
+			}
+		}
+	}
+}

@@ -1,22 +1,18 @@
-//vars
 @import "vars/colors";
 @import "vars/fonts";
 @import "vars/mixin";
 @import "vars/media";
 
-//utilities
 @import "utilities/buttons";
 @import "utilities/animation";
 @import "utilities/typography";
 
-//common
 @import "common/reset";
+@import "common/jquery.fancybox";
 @import "common/global";
 
-//components
 @import "components/components";
 
-//pages
 @import "pages/pages";
 
 @import "vars/spacing";

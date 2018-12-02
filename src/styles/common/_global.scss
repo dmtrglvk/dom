@@ -100,3 +100,24 @@ a {
   color: $lightest_grey;
   font-family: $ubuntu-light;
 }
+.fancybox-button {
+  background: none;
+}
+.fancybox-button--arrow_right {
+  svg {
+    display: none;
+  }
+  &:after {
+    @include arrow(12px, 12px, 2px, -53deg);
+    margin: -25px 25px 0 0;
+  }
+}
+.fancybox-button--arrow_left {
+  svg {
+    display: none;
+  }
+  &:after {
+    @include arrow(12px, 12px, 2px, 127deg);
+    margin: -25px 0 0 25px;
+  }
+}
