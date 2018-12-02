@@ -3,6 +3,14 @@
     box-shadow: 0 21px 24px 0 rgba(198,198,198,0.35);
     margin: 0 0 110px;
 
+    .service-slider & {
+        margin: 0 0 50px;
+
+        @include sm-down {
+            margin: 0 -20px 170px;
+        }
+    }
+
     @include sm-down {
         margin: 0 -20px 185px;
         box-shadow: none;

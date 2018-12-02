@@ -20,7 +20,13 @@
 
         </div>
 
-        {% include '../components/lets-call.twig' %}
+        {% set
+            letsCallVars = {
+                'imageUrl': 'img08.jpg'
+            }
+        %}
+
+        {% include '../components/lets-call.twig' with letsCallVars %}
 
     </article>
 

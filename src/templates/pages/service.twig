@@ -1,0 +1,89 @@
+{% include '../common/head.twig' %}
+
+<main class="page">
+
+    {% include '../common/header.twig' %}
+
+    <article class="main">
+        <div class="wrapper">
+            <div class="about-section one-column">
+                <h3>Дизайн интерьера</h3>
+                <div class="cols flexbox">
+                    <p>У Вас есть точное представление о том, что Вы хотите получить от интерьера, но необходимо что-то поменять: форму потолка, заменить напольные и настенные покрытия, при этом не меняя существующую электрическую схему помещений.  Дизайн-проект “ЭКОНОМНЫЙ” подходит в случае, если Вы не хотите вкладывать излишние затраты на ремонт помещения, но для Вас необходимо быть уверенным в том, что Вы получите нужный результат от потраченных средств.</p>
+                </div>
+            </div>
+
+            <div class="service-slider">
+                {% include '../components/content-slider.twig' %}
+            </div>
+
+            <div class="about-section">
+                <div class="cols flexbox">
+                    <div>
+                        <p>Архитектурно-строительная компания основана в 1997 году. Одним из ключевых направлений деятельности  является проектирование и строительство частных домов. Мы работаем в Европе с 2009 года. Накопленный опыт мы постоянно совершенствуем с учетом новых современных технологий и материалов и дополняем европейскими методами строительного производства и проектирования.  </p>
+                        <ul>
+                            <li>
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-check"></use>
+                                </svg>
+                                <span>Обмер помещения / обмерочные чертежи</span>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-check"></use>
+                                </svg>
+                                <span>Планировочные решения с расстановкой мебели</span>
+                            </li>
+                            <li>
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-check"></use>
+                                </svg>
+                                <span>План по отметке 0,5м</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Архитектурно-строительная компания основана в 1997 году. Одним из ключевых направлений деятельности  является проектирование и строительство частных домов. Мы работаем в Европе с 2009 года. Накопленный опыт мы постоянно совершенствуем с учетом новых современных технологий и материалов и дополняем европейскими методами строительного производства и проектирования.  </p>
+                        <ol>
+                            <li>Обмер помещения / обмерочные чертежи</li>
+                            <li>Планировочные решения с расстановкой мебели</li>
+                            <li>План по отметке 0,5м</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% set
+            serviceBoxVars = {
+                'serviceBoxHeading': 'Дизайн интерьера',
+                'servicePriceAmount': '€20'
+            }
+        %}
+
+        <div class="wrapper">
+            {% include '../components/service-box.twig' with serviceBoxVars %}
+        </div>
+
+        <div class="guarantee">
+            <div class="wrapper">
+                <h3>Мы гарантируем!</h3>
+                {% include '../components/guarantee.twig' %}
+            </div>
+        </div>
+
+        {% set
+            letsCallVars = {
+                'imageUrl': 'img09.jpg'
+            }
+        %}
+
+        {% include '../components/lets-call.twig' with letsCallVars %}
+
+    </article>
+
+    {% include '../common/footer.twig' %}
+
+</main>
+
+{% include '../common/end.twig' %}

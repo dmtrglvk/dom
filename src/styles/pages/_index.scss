@@ -3,7 +3,7 @@
 	color: $black;
 
 	.cols {
-		p {
+		&>p {
 			width: 48%;
 
 			@include sm-down {
@@ -11,12 +11,58 @@
 				margin: 0 0 20px;
 			}
 		}
+		&>div {
+			width: 48%;
+
+			@include sm-down {
+				width: 100%;
+				margin: 0 0 20px;
+			}
+			ul {
+				li {
+					margin: 20px 0 0;
+					display: flex;
+				}
+				svg {
+					width: 32px;
+					height: 28px;
+					display: block;
+					margin: 0 19px 0 0;
+				}
+			}
+			ol {
+				list-style: none;
+
+				li {
+					counter-increment: inst;
+					display: flex;
+					margin: 20px 0 0;
+
+					&:before {
+						content: counter(inst);
+						width: 28px;
+						height: 28px;
+						margin: 0 19px 0 0;
+						background: $gold;
+						border-radius: 50%;
+						font-family: $ubuntu-bold;
+						color: $white;
+						text-align: center;
+						font-size: 14px;
+						line-height: 31px;
+					}
+				}
+			}
+		}
 		@include sm-down {
 			flex-direction: column;
 		}
 	}
 	&.one-column {
-		margin: 0;
+
+		@include xs-down {
+			margin-bottom: 0;
+		}
 
 		.cols {
 			flex-direction: column;
