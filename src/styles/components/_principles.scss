@@ -39,6 +39,11 @@
 	line-height: 30px;
 	margin: 0 0 25px;
 	color: $black;
+
+	span {
+		width: calc(100% - 110px);
+		display: block;
+	}
 }
 .principles-icon-wrapper {
 	width: 90px;

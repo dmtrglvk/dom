@@ -94,6 +94,8 @@
 	&>p {
 		font-size: 17px;
 		color: $black;
+		display: block;
+		width: calc(100% - 110px);
 
 		@include xs2-down {
 			font-size: 15px;

@@ -39,6 +39,7 @@
 					margin: 20px 0 0;
 
 					&:before {
+						display: block;
 						content: counter(inst);
 						width: 28px;
 						height: 28px;
@@ -50,6 +51,7 @@
 						text-align: center;
 						font-size: 14px;
 						line-height: 31px;
+						flex-shrink: 0;
 					}
 				}
 			}
