@@ -169,18 +169,43 @@
     margin-left: auto;
 
     input[type=text] {
-        padding: 16px 0;
+        padding: 16px 15px;
         margin: 0 0 10px 5px;
         outline: none;
         display: block;
         background: none;
         border: solid $lightest_grey;
         border-width: 0 0 1px;
-        width: calc(100% - 10px);
+        width: calc(100% - 40px);
         font-size: 18px;
         line-height: 21px;
-        text-align: center;
         font-family: $ubuntu-reg;
+
+        &:focus {
+            border-bottom-color: $gold;
+        }
+
+        &:focus + label,
+        &.filled + label {
+            top: -7px;
+            left: 5px;
+            text-align: left;
+            font-size: 14px;
+            border-bottom-color: $gold;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 17px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: $lightest_grey;
+        font-size: 18px;
+        line-height: 21px;
+        transition: all .2s ease;
+        cursor: text;
     }
 
     button {
@@ -201,6 +226,9 @@
     @include xs-down {
         padding: 20px;
     }
+}
+.lets-call-form-row {
+    position: relative;
 }
 .lets-call-info {
     position: absolute;

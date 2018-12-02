@@ -1,0 +1,135 @@
+.popup-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	background: rgba(0,0,0,.77);
+	z-index: 1000;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 10px;
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s ease, visibility .2s ease;
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.popup {
+	max-width: 379px;
+	box-sizing: border-box;
+	border: 10px solid $blue;
+	border-radius: 5px;
+	padding: 40px;
+	background: $white;
+	overflow: auto;
+	position: relative;
+
+	@include sm-down {
+		padding: 20px;
+	}
+
+	.lets-call-form {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+
+		@include sm-down {
+			input[type=text] {
+				padding: 10px 15px;
+			}
+			button {
+				margin-top: 10px;
+			}
+		}
+	}
+	p {
+		color: $black;
+		margin: 0 0 30px;
+
+		@include sm-down {
+			font-size: 14px;
+		}
+	}
+	.popup-close-link {
+		color: $red;
+		text-transform: uppercase;
+		font: 14px/17px $ubuntu-bold;
+	}
+}
+.popup-close {
+	width: 22px;
+	height: 22px;
+	background: none;
+	text-indent: -9999px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+
+	&:before,
+	&:after {
+		height: 3px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		content: "";
+		background: #dcdcdc;
+		border-radius: 3px;
+	}
+	&:before {
+		transform: rotate(-45deg);
+	}
+	&:after {
+		transform: rotate(45deg);
+	}
+}
+.popup-title {
+	font: 24px/32px $ubuntu-reg;
+	margin: 0 0 30px;
+	max-width: 220px;
+	color: $black;
+	display: block;
+
+	@include sm-down {
+		font-size: 14px;
+		max-width: 240px;
+		font-family: $ubuntu-bold;
+		line-height: 22px;
+		margin: 0 0 15px;
+	}
+}
+.popup-logo {
+	width: 128px;
+	height:74px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(../images/logo-header.png);
+	background-size: 100% 100%;
+	display: block;
+	margin: 0 0 30px;
+
+	@include sm-down {
+		width: 83px;
+		height: 49px;
+	}
+}
+.popup-stage {
+	display: none;
+
+	&.active-stage {
+		display: block;
+	}
+}

@@ -32,4 +32,33 @@ $(function(){
         });
     }
 
+    if($('.js-callback-form').length) {
+        let $input = $('.js-callback-form input:text');
+        $input.on('blur', (e) => {
+            if($(e.target).val().trim() !== '') {
+                $(e.target).addClass('filled');
+            } else {
+                $(e.target).removeClass('filled');
+            }
+        })
+    }
+
+    if($('.js-popup').length) {
+        $('.js-open-popup').on('click', (e) => {
+            e.preventDefault();
+            $('.js-popup').addClass('visible');
+        });
+        $('.js-go-to-next-stage').on('click', (e) => {
+            e.preventDefault();
+            $(e.target).parents('.popup-stage').removeClass('active-stage');
+            $(e.target).parents('.popup-stage').next().addClass('active-stage');
+        });
+        $('.js-close-popup').on('click', (e) => {
+            e.preventDefault();
+            $(e.target).parents('.js-popup').removeClass('visible');
+            $('.js-popup .popup-stage').removeClass('active-stage');
+            $('.js-popup .popup-stage:first').addClass('active-stage');
+        })
+    }
+
 });
