@@ -1,0 +1,79 @@
+{% include '../common/head.twig' %}
+
+<main class="page">
+
+    {% include '../common/header.twig' %}
+
+    <article class="main">
+
+        <div class="wrapper">
+            <h3>Наши контакты</h3>
+            <div class="map-holder">
+                <div class="map-info-blocks">
+                    <div class="map-info">
+                        <div class="map-icon-box">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-tel"></use>
+                            </svg>
+                        </div>
+                        <strong>+420 000 000 000</strong>
+                    </div>
+                    <div class="map-info">
+                        <div class="map-icon-box">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-email"></use>
+                            </svg>
+                        </div>
+                        <a href="mailto:info@domum-design.ru">info@domum-design.ru</a>
+                    </div>
+                    <div class="map-info">
+                        <div class="map-icon-box">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-geo"></use>
+                            </svg>
+                        </div>
+                        <p>Московская область, г. Электросталь, ул. Красная, д. 42</p>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+
+        {% set
+            letsCallVars = {
+                'imageUrl': 'img08.jpg'
+            }
+        %}
+
+        {% include '../components/lets-call.twig' with letsCallVars %}
+
+    </article>
+
+    {% include '../common/footer.twig' %}
+
+</main>
+
+{% include '../common/end.twig' %}
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=0325c654-ff09-48a2-9f93-1d86132179f6" type="text/javascript"></script>
+<script type="text/javascript">
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.781883568954406,38.453355999999964],
+                zoom: 9,
+                controls: []
+            }),
+
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Domum design'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/map-pin.png',
+                iconImageSize: [137, 95],
+                iconImageOffset: [-55, -115]
+            })
+
+        myMap.geoObjects
+            .add(myPlacemark)
+    });
+</script>

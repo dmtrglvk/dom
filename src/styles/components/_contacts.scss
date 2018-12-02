@@ -1,0 +1,102 @@
+.map-holder {
+	height: 523px;
+	@include shadow-box();
+	margin: 0 0 129px;
+
+	@include md-down {
+		margin: 0 0 80px;
+	}
+	@include xs-down {
+		margin: 0 -20px 40px;
+		height: auto;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+#map {
+	height: 100%;
+	position: relative;
+	z-index: 5;
+
+	@include xs-down {
+		height: 400px;
+	}
+}
+.map-info-blocks {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 10;
+	height: calc(100% - 10px);
+
+	@include xs-down {
+		position: static;
+		padding: 0 20px 40px;
+	}
+}
+.map-icon-box {
+	@extend .principles-icon-wrapper;
+
+	@include xs2-down {
+		width: 70px;
+		height: 70px;
+
+		&:before {
+			height: 43px;
+			width: 43px;
+		}
+
+		svg {
+			width: 43px;
+		}
+	}
+}
+.map-info {
+	margin: 0 0 10px;
+	@include shadow-box();
+	background: $white;
+	width: 376px;
+	padding: 0 23px;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	height: calc((100% / 3) - 10px);
+
+	@include xs-down {
+		width: 100%;
+		padding: 20px 10px;
+	}
+
+	&:last-of-type {
+		margin: 0;
+	}
+
+	&:after {
+		display: none;
+	}
+	&>strong {
+		color: $black;
+		font: 24px/27px $ubuntu-bold;
+
+		@include xs2-down {
+			font-size: 18px;
+		}
+	}
+	&>a {
+		font-size: 17px;
+
+		@include xs2-down {
+			font-size: 15px;
+		}
+	}
+	&>p {
+		font-size: 17px;
+		color: $black;
+
+		@include xs2-down {
+			font-size: 15px;
+		}
+	}
+}

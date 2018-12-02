@@ -279,6 +279,7 @@
     }
 	@include xs2-down {
 		top: 60px;
+		height: calc(100vh - 60px);
 	}
 }
 .header-r-side {
