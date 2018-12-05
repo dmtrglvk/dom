@@ -349,19 +349,44 @@
 	margin: 25px 0 0;
 	font-family: $ubuntu-bold;
 	border: 1px solid $blue;
-	padding: 10px 22px 10px 20px;
 	border-radius: 3px;
 	align-self: flex-start;
+	position: relative;
 
-	a {
+	&>span {
+		color: $blue;
+		cursor: pointer;
+		position: relative;
+		padding: 10px 40px 10px 20px;
+		display: block;
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: $red;
+		}
+
 		&:after {
 			@include arrow(8px, 8px, 1px, 35deg);
 			margin: 7px 0 0 9px;
+			position: absolute;
+			top: 9px;
+			right: 20px;
 		}
-		&:hover {
-			&:after {
-				border-color: $red;
-			}
+	}
+	.language-dropdown {
+		position: absolute;
+		top: 47px;
+		left: -1px;
+		width: calc(100% + 2px);
+		padding: 0 10px 0 20px;
+		display: none;
+
+		@include xs-down {
+			top: 35px;
+		}
+
+		li {
+			padding: 5px 0;
 		}
 	}
 	@include md-down {
@@ -370,11 +395,46 @@
 	@include xs-down {
 		margin: 20px 20px 0 10px;
 		width: 74px;
-		padding: 4px 11px;
 		font-size: 17px;
+
+		&>span {
+			padding: 4px 29px 4px 11px;
+
+			&:after {
+				right: 11px;
+				top: 3px;
+			}
+		}
 	}
 	@include xs2-down {
 		display: none;
+	}
+	&.opened {
+		&>span {
+			background: $white;
+			border-radius: 3px;
+
+			&:after {
+				transform: rotate(-135deg);
+				top: 13px;
+
+				@include xs-down {
+					top: 8px;
+				}
+			}
+		}
+		.language-dropdown {
+			display: block;
+			background: $white;
+			border: solid $blue;
+			border-width: 0 1px 1px;
+			border-radius: 0 0 3px 3px;
+			box-sizing: border-box;
+
+			@include xs-down {
+				padding-left: 11px;
+			}
+		}
 	}
 }
 .menu-opener {

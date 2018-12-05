@@ -61,4 +61,13 @@ $(function(){
         })
     }
 
+    if($('.languages').length) {
+        let $opener = $('.js-language-selected');
+
+        $opener.on('click', (e) => {
+            let $el = $(e.currentTarget).parent();
+            $el.toggleClass('opened');
+        });
+    }
+
 });
